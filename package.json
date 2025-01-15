@@ -1,0 +1,44 @@
+{
+  "name": "hashtagify",
+  "displayName": "Hashtagify",
+  "description": "VS Code extension to turn word list into sequence of hashtags",
+  "version": "0.1.0",
+  "publisher": "Geeksta",
+  "author": "Ramiro Gómez (https://ramiro.org/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yaph/hashtagify"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "hashtagify.wordList",
+        "title": "Hashtagify Word List"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@stylistic/eslint-plugin": "^2.13.0",
+    "@types/node": "^22",
+    "@types/vscode": "^1.96.0",
+    "eslint": "^9.18.0",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.20.0"
+  }
+}
