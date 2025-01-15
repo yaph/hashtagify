@@ -31,7 +31,8 @@
     "compile": "tsc -p ./",
     "lint": "eslint",
     "watch": "tsc -watch -p ./",
-    "version:minor": "npm version minor && git push && git push --tags"
+    "version:minor": "npm version minor && git push && git push --tags",
+    "github:preview": "convert media/github-peview.png -resize ^1280x640 -crop 1280x640+0+0 PNG24:- | pngquant --force --output media/github-peview.opt.png -"
   },
   "devDependencies": {
     "@eslint/js": "^9.18.0",

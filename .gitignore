@@ -1,6 +1,7 @@
 *.vsix
-*.mp4
 out/
+media/*.mp4
+media/*.png
 
 # Logs
 logs
