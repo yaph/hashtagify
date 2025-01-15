@@ -14,11 +14,11 @@ export function activate(context: vscode.ExtensionContext) {
             if (text.includes(',')) {
                 wordList = text.split(/, */);
             } else {
-                wordList = text.split(' ');
+                wordList = text.split(/ +/);
             }
 
             const hashtags = wordList.map(item =>
-                `#${item.trim().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}`
+                `#${item.split(/ +/).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}`
             );
             editor.edit(editBuilder => {
                 editBuilder.replace(selection, hashtags.join(' '));
