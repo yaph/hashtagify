@@ -9,7 +9,7 @@ Adds a command that turns the selected text into a sequence of hashtags, for exa
 
 ![demo](media/hashtagify-demo.gif)
 
-## Test and publish the Extension
+## Test and Publish the Extension
 
 1. Press `F5` in VS Code to run the extension in a new Extension Development Host window.
 2. Open a file in the new development environment, select a string of words (e.g., `geo map, urban art`).
