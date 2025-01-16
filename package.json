@@ -2,7 +2,7 @@
   "name": "hashtagify",
   "displayName": "Hashtagify",
   "description": "VS Code extension to turn word list into sequence of hashtags",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "Geeksta",
   "author": "Ramiro Gómez (https://ramiro.org/)",
   "license": "MIT",
