@@ -8,7 +8,6 @@ export function activate(context: vscode.ExtensionContext) {
         if (editor) {
             const selection = editor.selection;
             const text = editor.document.getText(selection).trim();
-
             // If the text contains a comma, split by comma, otherwise split by space
             let wordList = [];
             if (text.includes(',')) {
@@ -18,7 +17,7 @@ export function activate(context: vscode.ExtensionContext) {
             }
 
             const hashtags = wordList.map(item =>
-                `#${item.split(/ +/).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}`
+                `#${item.split(/[ \-]+/).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}`
             );
             editor.edit(editBuilder => {
                 editBuilder.replace(selection, hashtags.join(' '));
